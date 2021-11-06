@@ -1,3 +1,5 @@
+![](images/hdr.jpg)
+
 # Formula1_Fun
 ETL project. Taking in Formula 1 data...
 
@@ -13,3 +15,10 @@ We are interested in uncovering:
 2) who is the most winningest driver in F1 history? How many wins did they have followed by which other driver was closest to them?
 3) whether there is there a significant correlation between which drivers win in the qualifying rounds and those who win the actual race?
 4) which races resulted in a status Megatron and find out what that is by scraping the Wikepida post and adding a status description to the status table
+
+## Team Members:
+<ul style="list-style:none">
+<li>Serena Remtulla-Langlois</li>
+<li>Ben Smith</li>
+<li>Jon Wood</li>
+</ul>
