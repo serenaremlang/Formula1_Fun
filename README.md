@@ -1,2 +1,2 @@
-# Formula_1_Fun
+# Formula1_Fun
 ETL project. Taking in Formula 1 data...
