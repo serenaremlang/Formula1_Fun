@@ -2,7 +2,7 @@
 */config.py
 
 # Adding data file for importing until/if path can be parameterized
-*/import_data.sql
+#*/import_data.sql
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
