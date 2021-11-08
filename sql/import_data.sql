@@ -1,4 +1,5 @@
---Ensure the account postgres is running as has read permissions for the location these files reside in
+-- ** Ensure the account postgres is running as an account that has read\execute permissions for the location these files reside in
+-- ** Updated to convert \N to null on import as these csv files had this in many fields
 
 copy public."Status" ("statusId", "status") FROM 'C:\Users\Jon\Documents\BOOTCAMP\Formula_1_Fun\resources\data\status.csv' DELIMITER ',' CSV HEADER QUOTE '"' ESCAPE '''' null '\N';
 
