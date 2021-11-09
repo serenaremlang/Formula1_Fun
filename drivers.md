@@ -13,6 +13,7 @@
 <li>Who was the winningest driver of all time?</li>
 <li>How many wins did this driver have?</li>
 <li>Who was the next most winningest driver behind them?</li>
+</ul>
 </p>
 
 <p>Once the data for this was found, it was flatened and stored in mongo along with a url to the driver's profile image from wikipedia</p>
