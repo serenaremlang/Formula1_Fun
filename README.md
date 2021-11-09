@@ -9,6 +9,9 @@ ETL project. Taking in Formula 1 data...
   - Contains information about: Drivers, races,
 - Wikepedia (to be scraped and formatted with beautifulsoup)
 
+## Database:
+PostgresSQL
+
 ## Hypothesis:
 We are interested in uncovering:
 1) the frequency of which any circuit appeared in the history of formula 1. We also want to uncover which circuit has been featured the most across 1950 to 2021 formula 1 seasons.
