@@ -1,6 +1,9 @@
 # config file
 */config.py
 
+# DS_Store
+.DS_Store
+
 # Adding data file for importing until/if path can be parameterized
 #*/import_data.sql
 
