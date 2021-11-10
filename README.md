@@ -3,7 +3,7 @@
 # Formula1_Fun
 For this project, we were intersted in answering the following questions:
 
-1) Who are the top 3 drivers for all time wins in recorded F1 history??
+1) Who are the top 3 drivers for all time wins in recorded F1 history?
 2) What is the frequency of which any circuit appeared in the history of formula 1 and which circuit has been featured the most across 1950 to 2021 formula 1 seasons.
 3) Is there a significant difference between a driver's qualifying scores and race scores?
 
@@ -31,27 +31,30 @@ For our first question, Jon imported the driver data into postgresql and cleanse
  - converting the relevant data to the appropriate data types (ints, text, etc)
  - link to drivers_import_data.sql file.
 
+ Further transfomations were done after the data was subsequently manipulated with pandas and joined/aggregated via sql alchemey. (see sql/drivers.ipynb and app/drivers_scrape.py)  It was then pumped into mongo where a flask app was used to render the mongo data along with scraped data from wikitpedia to
+ render the final results to answer the question : Who are the top 3 drivers for all time wins in recorded F1 history? (see app/drivers_app.py)
+
 Ben - what did you do?
 
 Serena imported the qualifying (link) .csv into a jupyter notebook and set it up as a pandas dataframe. Using Pandas she cleaned the data. She also set up blank tables with the approparite columns to keep the data needed and set the data types, primary keys and foreing keys to join with the other tables made by Jon and Ben in her Postgres database to hold the dataframes (link to schema).
 
 ## Load
-Jon - drivers_import_data.sql
+Jon loaded finalized data into postgreSQL via the drivers_import_data.sql file that took care replacing erroneous data (\n's) and converting those to null as described in the Transform section above. Scripting the import allowed for quickly re-running the process to deal with any datatype mismatches etc. so getting the data put into tables with appropriate data types and linked as per the schema design (see drivers.md) was acheived quickly and accuratly.  Further transformation was done (joined/aggregated) and then loaded into mongo for use in the web app for visualising the results with only the data needed for this purpose.
 
 Ben using SQL Alchemy loaded into tables of his db -link to file
 
 Serena using SQL Alchemy loaded into tables of db F1 - link to file
 
 ## Analysis
- In order to answer our first question, Jon then loaded into a jupyter notebook (link). The data was then pulled into pandas to perform analysis via orm for joining and aggregating the data to answer the question:
-- Who are the top 3 drivers in F1 history based on number of wins?</li>
+ In order to answer our first question, Jon first used a jupyter notebook (drivers.ipynb) to quickly read the data that was loaded into postgreSQL. The data was then pulled into pandas to perform analysis via orm (sql alchemey) for joining and aggregating the data to answer the question:
+Who are the top 3 drivers in F1 history based on number of wins?. Once the process to get the answer was discerned, he transferred this logic into the drivers_scrape.py app to be part of the process to visualise the final result. </li>
 
  Ben import graph
 
  Serena - show solution of stats
  
  ## Bonus
- the code was then converted into a python app (linke to code for app) that read the data from our newly minted Postgres database joined with the wikepieda images and flattened and stored in mongo (mongo data)  where it was then rendered back out (link to page)
+ Jon created a flask app to render the result out to a web page to show the total wins for the top 3 drivers along with their bio pic found on wikipedia. The neccessary code from the drivers.ipynb notebook was converted into a python app (app/drivers_app.py and app/drivers_scrape.py) that read the data from our newly minted Postgres database joined with the wikepieda images and flattened and stored in mongo (mongo data)  where it was then rendered back out via an html template formatted with bootstrap (/app/templates/index.html))
 
 
 ## Data:
