@@ -59,7 +59,7 @@ Who are the top 3 drivers in F1 history based on number of wins?. Once the proce
 
 Our Second question was to discover which circuits have been featured the most across the history of the F1 championship. We used SQL alchemey in the races_analysis.ipynb file to take the sql databases in to pandas. Then we used a group by function on circuit ID and merged the races and circuits dataframes to then determine the answer.
  Ben import graph
- ![](images/years_per_circuit.jpg)
+ ![](images/years_per_circuit.png)
 
  Our third question was to see if there would be a significant difference between race standings positions comparare to race qualifying positions. Based on a paired samples t-test grouping based on driver, there was no significant difference. See analysis/qualifying_analysis.ipynb for work.
  
