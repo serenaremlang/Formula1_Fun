@@ -1,6 +1,6 @@
 ![](images/hdr.jpg)
 
-# Formula1_Fun
+# Formula1_Fun 
 For this project, we were intersted in answering the following questions:
 
 1) Who are the top 3 drivers for all time wins in recorded F1 history?
@@ -32,6 +32,8 @@ We also scrapped Wikepida to pull a picture of the drivers. - see app/drivers_sc
 
 
 ## Transform
+Given that all our data had relationships we decided we would be organizing our data into a relational database and so we chose PostgresSQL.
+
 For our first question, Jon imported the driver data into postgresql and cleansed it on the import process by:
  - dealing with erroneous data and converting those values to null
  - converting the relevant data to the appropriate data types (ints, text, etc)
@@ -73,8 +75,8 @@ Our Second question was to discover which circuits have been featured the most a
 - Wikepedia (to be scraped and formatted with beautifulsoup)
 
 ## Database:
-- PostgresSQL
-- MongoDB
+- PostgresSQL - For F1 data
+- MongoDB - for webscraping info for winner's circle webapp
 
 
 ## Team Members:
