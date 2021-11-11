@@ -13,7 +13,10 @@ create table race_db (
 	raceId int primary key,
 	year int,
 	circuitId int,
-	name text,
-	url text,
 	foreign key(circuitId) references circuits_db(circuitId)
 );
+
+select circuitid, count(raceid) as "Total Races"
+from race_db
+group by circuitid
+order by "Total Races" DESC;
