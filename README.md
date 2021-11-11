@@ -34,7 +34,7 @@ For our first question, Jon imported the driver data into postgresql and cleanse
  Further transfomations were done after the data was subsequently manipulated with pandas and joined/aggregated via sql alchemey. (see sql/drivers.ipynb and app/drivers_scrape.py)  It was then pumped into mongo where a flask app was used to render the mongo data along with scraped data from wikitpedia to
  render the final results to answer the question : Who are the top 3 drivers for all time wins in recorded F1 history? (see app/drivers_app.py)
 
-Ben - what did you do?
+Ben - imported the races.csv and circuits.csv files in to pandas and created dataframes. From there he checked the dataframes for null values. He then reduced the dataframes down the the important series that we wanted to keep. From there Ben created tables in pgadmin to properly import the dataframes to sql from pandas.
 
 Serena imported the qualifying (link) .csv into a jupyter notebook and set it up as a pandas dataframe. Using Pandas she cleaned the data. She also set up blank tables with the approparite columns to keep the data needed and set the data types, primary keys and foreing keys to join with the other tables made by Jon and Ben in her Postgres database to hold the dataframes (link to schema).
 
@@ -49,7 +49,9 @@ Serena using SQL Alchemy loaded into tables of db F1 - link to file
  In order to answer our first question, Jon first used a jupyter notebook (drivers.ipynb) to quickly read the data that was loaded into postgreSQL. The data was then pulled into pandas to perform analysis via orm (sql alchemey) for joining and aggregating the data to answer the question:
 Who are the top 3 drivers in F1 history based on number of wins?. Once the process to get the answer was discerned, he transferred this logic into the drivers_scrape.py app to be part of the process to visualise the final result. </li>
 
+Our Second question was to discover which circuits have been featured the most across the history of the F1 championship. We used SQL alchemey to take the sql databases in to pandas. Then we used a group by function on circuit ID and merged the races and circuits dataframes to then determine the answer.
  Ben import graph
+ ![](images/years_per_circuit.jpg)
 
  Serena - show solution of stats
  
